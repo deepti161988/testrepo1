@@ -22,7 +22,7 @@ print(data)"""
 #print(name)
 #name1 = sheet1.cell_value( 2 , 2 )
 #print(name1)
-workbook1 = xlrd.open_workbook("testsheets.xls")
+#workbook1 = xlrd.open_workbook("testsheets.xls")
 sheet2 = workbook1.sheet_by_name("S2")
 rowcount2 = sheet2.nrows
 colcount2 = sheet2.ncols
