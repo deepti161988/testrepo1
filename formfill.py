@@ -1,3 +1,9 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import Select
+import time
+
 # to read data from excel we have to install xlrd from pip then import sheet
 from xlrd import sheet
 import xlrd
@@ -46,11 +52,6 @@ print(mobno)
 #print(rowcount2)
 #print(colcount2)
 #print(name1)"""
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import Select
-import time
 driver = webdriver.Chrome(executable_path= "C:\\BIkash Practice\\Python\\Python38-32\\chromedriver.exe")
 driver.get("https://www.orangehrm.com/")
 
