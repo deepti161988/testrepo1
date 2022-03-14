@@ -1,4 +1,4 @@
-#different operation of string
+'''#different operation of string
 nm = 'DEEPTI'                           #it is a string containing some value
 #nm =  'D , E , E , P , T , I'          #also a string can be written like this
 #nm[1] = 'i'                             #not working
@@ -61,7 +61,7 @@ print(max(str))                        #it returns the last albhabetically lette
 print(min(str))                        #it returns the first alphabetical letter found in string
 print(str.replace('hi' , 'hello'))          #it replace a word with another word in a string
 print(str.split('am'))                      #it removes the word/all the words from the string and print 
-"""#removes all duplicate and print number of occurance
+#removes all duplicate and print number of occurance
 st = input("The string is : ")                      #enter a string dynamically        
 s=set(st)                                       #it removes all duplicates and its data type is set
 print(s)
@@ -117,7 +117,7 @@ print(list)
 for i in range(len(list)) :                                       #here we can read all value of list 
   print(list[i:i+1:len(list)])                                       #use of for...else... loop
 else:
-    print("list is over") """
+    print("list is over") 
 
 #use of function
 def nname():
@@ -134,23 +134,29 @@ def nname1(name):
     print(name)                         
 nname1("deepti")                                                   #function define and call with one argument
 
-#same in other way
-def nnname1(name = "deepti"):
-    print(name)
-nnname1()                                                          #function define  with default parameter
+#If we call the function without argument, it uses the default value
+def name2(name = "deepti"):
+    print('my name is ', name)
+name2('ishi')                                                   
+name2('iti')
+name2()                                                         #function define  with default parameter
+name2('aadya')                                                          
 #function with 2 argument
-def my_function(fname, lname):
+def my_func1(fname, lname):
   print(fname + " " + lname)
-
-my_function("deep", "pat")
-my_function('ishi' 'iti')
-#if number of argument is not known
-def my_function(*kids):
+my_func1("deep", "pat")
+my_func1('ishi' , 'iti')
+#we can also send arguments with the key = value syntax
+def my_func2(child3, child2, child1):
+  print("The youngest child is " + child3)
+my_func2(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+#If the number of arguments is unknown, add a * before the parameter name:
+def my_func3(*kids):
   print("The youngest child is " + kids[2])
-
-my_function("Emil", "Tobias", "Linus")
-
-
+my_func3("Emil", "Tobias", "Linus")
+# having an empty function definition like this, would raise an error without the pass statement
+def myfunction():
+  pass
 #pass a list into a function
 def sub(list):
     print(list[2])
@@ -159,14 +165,12 @@ def sub(list):
         print(x)
 #subnam = ['python','java','ruby','api','jira','selenium']
 sub(['python','java','ruby','api','jira','selenium'])
-
 #function call with return
 def add(a,b):
     c=a+b
     return c
 x = add(4,7)                                                #function call with return
 print(x)
-
 #if elif loop within a function
 def launchbrowser(browser):
     if browser=='chrome':
@@ -189,6 +193,59 @@ def fact(num):
     return num
 print(fact(4))
 
+#Lambda functions can take any number of arguments:
+a = lambda a,b,c:a+b+c
+print(a(2,3,4))
+#a function definition that takes one argument, and that argument will be multiplied with an unknown number
+def myfunc(n):
+  return lambda a : a * n
+mydoubler = myfunc(2)
+print(mydoubler(11))'''
 
+#use of function defination which can double or triple of a value
+def myfunc1(n):
+  return lambda a : a * n
+mydoubler = myfunc1(2)
+mytripler = myfunc1(3)
+print(mydoubler(11)) 
+print(mytripler(11))
+## use of class/object
+class myclass:
+    x=5
+    y=3
+print(myclass)
+c1 = myclass()
+print(c1.y)
+print(c1.x)
+#All classes have a builtin function called __init__(), which is always executed when the class is being initiated.
+class Person:                                 #it is class declare,class name always start with capital letter
+    student = 10                        #the variable declare inside a class is called class variable
+    def __init__(self, name, age):          #it is declaration of constructor of Person class
+        self.name = name                
+        self.age = age                   #the variable declare inside a method are known as instance variable
+p1 = Person("John", 36)                 #creating object for Person class
+print(p1.name)
+print(p1.age)
+# data hiding(private,public)
+class myclass2:
+    p=5
+    __q=3                                         #it is a private data member of class myclass2
+c2 = myclass2()
+print(c2.p)
+#print(c2.__q)                            its not the way to call the private variable
+print(c2._myclass2__q)                        #access private hidden data outside of class by a tricky syntax
+
+class teacher:
+    def __init__(self, name, age):          #  
+        self.name = name                
+        self.age = age  
+class student(teacher):
+    def __init__(self, name, age):          #
+        self.name = name                
+        self.age = age  
+
+p1 = person()
+print(p1.y)
+print(p1.x)
 
 

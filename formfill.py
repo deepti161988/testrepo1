@@ -83,5 +83,5 @@ driver.find_element_by_id("Form_submitForm_Comment").send_keys("patel.deepti16@g
 n = driver.find_elements_by_css_selector("#header-navbar > ul.nav.navbar-nav.navbar-right.extended-nav > li:nth-child(1) > a")
 a.move_to_element(n).click()"""
 
-time.sleep(10)
-driver.quit()
+#time.sleep(10)
+#driver.quit()
