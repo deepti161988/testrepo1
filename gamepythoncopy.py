@@ -1,5 +1,5 @@
 import random
-print('hii')
+print('hii deepti')
 
 def gamewinner(user , computer):
     if user == computer :
