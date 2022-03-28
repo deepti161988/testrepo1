@@ -218,7 +218,7 @@ c1 = myclass()
 print(c1.y)
 print(c1.x)
 #All classes have a builtin function called __init__(), which is always executed when the class is being initiated.
-class Person:                                 #it is class declare,class name always start with capital letter
+class Person:                                
     student = 10                        #the variable declare inside a class is called class variable
     def __init__(self, name, age):          #it is declaration of constructor of Person class
         self.name = name                
@@ -236,16 +236,16 @@ print(c2.p)
 print(c2._myclass2__q)                        #access private hidden data outside of class by a tricky syntax
 
 class teacher:
-    def __init__(self, name, age):          #  
-        self.name = name                
-        self.age = age  
+    def __init__(self, name, age):            
+        self.name = name                            #instance variable
+        self.age = age                              #instance variable
 class student(teacher):
-    def __init__(self, name, age):          #
-        self.name = name                
-        self.age = age  
+    def __init__(self, name, age):          
+        self.name = name                            #instance variable
+        self.age = age                              #instance variable
 
-p1 = person()
-print(p1.y)
-print(p1.x)
+p1 = teacher("aa" , 10)
+print(p1.name)
+print(p1.age)
 
 
